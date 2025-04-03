@@ -1,1 +1,82 @@
 /* This file is intentionally left blank. */
+.titulo {
+    font-family: Arial, sans-serif;
+    font-size: 2em;
+    color: #bd5aff;
+    text-align: center;
+}
+.foto {
+    width: 20%;
+    height: auto;
+    border-radius: 200px;
+    border: 5px solid #dcb1ff;
+    margin: 50px auto;
+    display: block; 
+}
+body {
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+}
+p {
+    color: #ffffff;
+    font-size: 1.2em;
+}
+.quiensoy {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 60px;
+}
+.quientexto {
+    color: #ffffff;
+    font-size: 0.9em;
+    border: 2px solid #dcb1ff;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+.linea1 {
+    border: #dcb1ff solid 1px;
+    width: 80%;
+    margin-top: 50px;
+
+}
+.habilidades {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 60px;
+}
+.habtexto {
+    color: #ffffff;
+    font-size: 0.9em;
+    border: 2px solid #dcb1ff;
+    width: 50%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+.misproyectos {
+    color: #dddddd;
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 60px;
+    text-decoration: underline;
+}
+.video1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.video2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
