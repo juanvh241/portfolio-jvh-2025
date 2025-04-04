@@ -7,32 +7,80 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <img src="https://i.postimg.cc/kGHSNG3f/yo-foto-portfolio.jpg" alt="Imagen de perfil" class="foto">
-    <h1 class="titulo" >~ Bienvenid@ ~</h1>
-    <hr class="linea1">
-    <h2 class="quiensoy" >¿Quién soy?</h2>
-    <div class="quientexto">
-        <p> Me llamo Juan Martin Vianco, tengo 19 años y soy de Entre Rios, Argentina. 
-            <br> Actualmente estoy estudiando Producción de Videojuegos y Entretenimiento Digital 
-        <br> en la Universidad Nacional de Rafaela.</p>
+    <div class="tab-buttons">
+        <button class="active" onclick="showTab('info')">Información</button>
+        <button onclick="showTab('proyectos')">Videos</button>
+        <button onclick="showTab('videojuegos')">Videojuegos</button>
+    </div>
+    
+    <div id="info" class="tab-content active">
+        <img src="https://i.postimg.cc/kGHSNG3f/yo-foto-portfolio.jpg" alt="Imagen de perfil" class="foto">
+        <h1 class="titulo" >~ Bienvenid@ ~</h1>
+        <hr class="linea1">
+        <h2 class="quiensoy" >¿Quién soy?</h2>
+        <div class="quientexto">
+            <p> Me llamo Juan Martin Vianco, tengo 19 años y soy de Entre Rios, Argentina. 
+                <br> Actualmente estoy estudiando Producción de Videojuegos y Entretenimiento Digital 
+            <br> en la Universidad Nacional de Rafaela.</p>
         </div>
-    <h2 class="habilidades" >Habilidades</h2>
-    <div class=habtexto>
-        <p> Me gusta mucho producir y editar videos, lo suelo hacer por hobby
-            <br> grabando y editando gameplays o vlogs, pero tambien he producido
-            <br> videos destinados a proyectos para el secundario.
-        </p>
+        <h2 class="habilidades" >Habilidades</h2>
+        <div class=habtexto>
+            <p> Me gusta mucho producir y editar videos, lo suelo hacer por hobby
+                <br> grabando y editando gameplays o vlogs, pero tambien he producido
+                <br> videos destinados a proyectos para el secundario.
+            </p>
+        </div>
     </div>
-    <h3 class="misproyectos" >Estos son algunos de mis proyectos:</h3>
-    <div class="video1" >
-        <iframe src="https://drive.google.com/file/d/1_6eEe4YBr51bRSbGLNQ6N3IEV39uuGRn/preview" 
-        width="640" height="360" allow="autoplay"></iframe>    </div>
-    <br>
-    <div class="video2" >
-        <iframe src="https://drive.google.com/file/d/1Q2Q2T9AmFbid34Ha2KVJJanHKndChsS0/preview" 
-        width="640" height="360" allow="autoplay"></iframe>    </div>
-    <br>
-    <div class="video3" >
-        <iframe width="640" height="360" src="https://www.youtube.com/embed/j7EHWDJWFYY" title="Trabajo practico de lengua y literatura &quot;Tiempos violentos&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+    <div id="proyectos" class="tab-content">
+        <h3 class="misproyectos" >Estos son algunos de mis proyectos:</h3>
+        <div class="video1" >
+            <iframe src="https://drive.google.com/file/d/1_6eEe4YBr51bRSbGLNQ6N3IEV39uuGRn/preview" 
+            width="640" height="360" allow="autoplay"></iframe>
+        </div>
+        <br>
+        <div class="video2" >
+            <iframe src="https://drive.google.com/file/d/1Q2Q2T9AmFbid34Ha2KVJJanHKndChsS0/preview" 
+            width="640" height="360" allow="autoplay"></iframe>
+        </div>
+        <br>
+        <div class="video3" >
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/j7EHWDJWFYY" title="Trabajo practico de lengua y literatura &quot;Tiempos violentos&quot;" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
+    
+    <div id="videojuegos" class="tab-content">
+        <div class="juegostexto" >
+            <p> Hasta el momento, en el único proyecto jugable en el que trabaje
+                <br> fue en una aventura gráfica hecha con el motor Twine. Para 
+                <br> la cual yo diseñe el guion y produje las imagenes y sonidos.
+            </p>
+            <div class="boton-juego">
+                <button onclick="window.location.href='https://shaar-down.itch.io/el-mejor-amigo-del-hombre'">Jugar</button>
+            </div>
+        </div>
+        <h3 class="capturastexto" >Capturas</h3>
+        <div class="capturas" >
+            <img src="https://i.postimg.cc/YS52ZN0w/mi-juego-captura-1.png" alt="captura 1">
+            <img src="https://i.postimg.cc/FKv677YQ/mi-juego-captura-2.png" alt="captura 2">
+            <img src="https://i.postimg.cc/CKqSGZNr/mi-juego-captura-3.png" alt="captura 3">
+            <img src="https://i.postimg.cc/85dGYqxh/mi-juego-captura-4.png" alt="captura 4">
+            <img src="https://i.postimg.cc/kGnCPTdL/mi-juego-captura-5.png" alt="captura 5">
+            <img src="https://i.postimg.cc/1XJQmDmX/mi-juego-captura-6.png" alt="captura 6">
+        </div>
+    </div>
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            document.querySelectorAll('.tab-buttons button').forEach(button => {
+                button.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            document.querySelector(`[onclick="showTab('${tabId}')"]`).classList.add('active');
+        }
+    </script>
     </html>
